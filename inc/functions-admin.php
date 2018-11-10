@@ -15,6 +15,12 @@ function mount_settings_page_admin() {
         register_setting( 'gsp-group', 'g_source_'.$i );
         register_setting( 'gsp-group', 'g_image_'.$i );
     }
+
+    for ( $i=1 ; $i<=3 ; $i++ ) {
+        register_setting( 'gsp-group', 'g_text_'.$i );
+        register_setting( 'gsp-group', 'g_button_'.$i );
+        register_setting( 'gsp-group', 'g_url_'.$i );
+    }
 }
 
 function mount_settings_page() {
@@ -58,6 +64,27 @@ function mount_settings_page() {
                         <th scope="row"><label for="g_image_<?php echo $i; ?>">Image URL</label></th>
                         <td><input type="text" name="g_image_<?php echo $i; ?>" value="<?php echo get_option('g_image_'.$i); ?>" /></td>
                         <td>Image size 1240px x 360px max</td>
+                    </tr>
+                </table>
+            <?php } ?>
+            <?php submit_button(); ?>
+
+            <h2>Call to action</h2>
+            <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>
+                <hr>
+                <h3>Button <?php echo $i; ?> </h3>
+                <table class="form-table">
+                    <tr valign="top">
+                        <th scope="row"><label for="g_text_<?php echo $i; ?>">Button label</label></th>
+                        <td><input type="text" name="g_text_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_text_'.$i) ); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="g_button_<?php echo $i; ?>">Button label</label></th>
+                        <td><input type="text" name="g_button_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_button_'.$i) ); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="g_url_<?php echo $i; ?>">Button URL</label></th>
+                        <td><input type="text" name="g_url_<?php echo $i; ?>" value="<?php echo get_option('g_url_'.$i); ?>" /></td>
                     </tr>
                 </table>
             <?php } ?>
