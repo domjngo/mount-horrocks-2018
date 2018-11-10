@@ -17,6 +17,7 @@ function mount_settings_page_admin() {
     }
 
     for ( $i=1 ; $i<=3 ; $i++ ) {
+        register_setting( 'gsp-group', 'g_title_'.$i );
         register_setting( 'gsp-group', 'g_text_'.$i );
         register_setting( 'gsp-group', 'g_button_'.$i );
         register_setting( 'gsp-group', 'g_url_'.$i );
@@ -75,7 +76,11 @@ function mount_settings_page() {
                 <h3>Button <?php echo $i; ?> </h3>
                 <table class="form-table">
                     <tr valign="top">
-                        <th scope="row"><label for="g_text_<?php echo $i; ?>">Button label</label></th>
+                        <th scope="row"><label for="g_title_<?php echo $i; ?>">Title</label></th>
+                        <td><input type="text" name="g_title_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_title_'.$i) ); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="g_text_<?php echo $i; ?>">Text</label></th>
                         <td><input type="text" name="g_text_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_text_'.$i) ); ?>" /></td>
                     </tr>
                     <tr valign="top">
