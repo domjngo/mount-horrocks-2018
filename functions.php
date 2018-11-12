@@ -1,7 +1,7 @@
 <?php
 // Blank canvas functions
 
-include 'inc/functions-blankcanvas.php';
+include 'inc/functions-global.php';
 include 'inc/functions-admin.php';
 
 add_theme_support( 'post-thumbnails' );

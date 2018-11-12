@@ -30,7 +30,13 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <?php wp_nav_menu(array('menu' => 'primary', 'items_wrap' => '<ul class="nav navbar-nav navbar-right" role="menu">%3$s</ul>', 'container' => false)); ?>
+                    <?php wp_nav_menu(array(
+                            'menu' => 'primary',
+                            'items_wrap' => '<ul class="nav navbar-nav navbar-right" role="menu">%3$s</ul>',
+                            'link_before' => '<span>',
+                            'link_after' => '</span>',
+                            'container' => false
+                    )); ?>
                 </div>
             </div>
         </nav>

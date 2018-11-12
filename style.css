@@ -151,6 +151,17 @@ ul.buttons li a:hover {
     border: none;
     background: #fff;
 }
+@media (min-width: 768px) {
+    .navbar .container-fluid {
+        display: table;
+        width: 100%;
+        max-width: 1240px;
+    }
+    .navbar-default .navbar-collapse {
+        display: table-cell !important;
+        vertical-align: middle;
+    }
+}
 .navbar-brand {
     height: 100px;
 }
@@ -175,8 +186,9 @@ ul.buttons li a:hover {
 .navbar-default .navbar-nav > li > a:focus {
     color: #91700C;
 }
-.navbar-default .navbar-nav > li.current-menu-item > a {
+.navbar-default .navbar-nav > li.current-menu-item > a span {
     color: #91700C;
+    border-bottom: 3px solid;
 }
 
 /**
@@ -200,7 +212,36 @@ footer .site-info {
  * Home
  * ----------------------------------------------------------------------------
  */
-
+.header-home {
+    display: table;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    min-height: 480px;
+    color: #fff;
+}
+.header-home h1, .header-home p {
+    color: #fff;
+    text-shadow: #222 2px 2px 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.header-home .container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.home-entry {
+    margin: 1.6em 0;
+}
+.btn-action {
+    color: #000;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.7);
+    border-color: #fff;
+    padding: 1em 1.6em;
+    margin: 0 0.6em;
+}
 .banner h1 {
     font-size: 4em;
     margin: 1.6em 0 0.5em;
