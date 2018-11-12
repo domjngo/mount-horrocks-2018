@@ -207,6 +207,9 @@ footer ul {
 footer .site-info {
     padding: 1em;
 }
+.widFRR {
+    margin: 0 auto !important;
+}
 
 /**
  * Home

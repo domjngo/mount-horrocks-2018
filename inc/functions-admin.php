@@ -14,6 +14,12 @@ function mount_settings_page_admin() {
     register_setting( 'gsp-group', 'home_quote' );
     register_setting( 'gsp-group', 'home_source' );
 
+    register_setting( 'gsp-group', 'g_facebook' );
+    register_setting( 'gsp-group', 'g_twitter' );
+    register_setting( 'gsp-group', 'g_instagram' );
+    register_setting( 'gsp-group', 'g_tripadvisor' );
+    register_setting( 'gsp-group', 'g_location' );
+
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'g_quote_'.$i );
         register_setting( 'gsp-group', 'g_source_'.$i );
@@ -122,6 +128,31 @@ function mount_settings_page() {
                     </tr>
                 </table>
             <?php } ?>
+            <?php submit_button(); ?>
+
+            <h2>Site settings</h2>
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="g_location">Location</label></th>
+                    <td><input type="text" name="g_location" value="<?php echo get_option('g_location'); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="g_facebook">Facebook</label></th>
+                    <td><input type="text" name="g_facebook" value="<?php echo esc_attr( get_option('g_facebook') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="g_twitter">Twitter</label></th>
+                    <td><input type="text" name="g_twitter" value="<?php echo esc_attr( get_option('g_twitter') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="g_instagram">Instragram</label></th>
+                    <td><input type="text" name="g_instagram" value="<?php echo get_option('g_instagram'); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="g_tripadvisor">Tripadvisor code</label></th>
+                    <td><textarea name="g_tripadvisor"><?php echo esc_attr( get_option('g_tripadvisor') ); ?></textarea></td>
+                </tr>
+            </table>
             <?php submit_button(); ?>
         </form>
     </div>
