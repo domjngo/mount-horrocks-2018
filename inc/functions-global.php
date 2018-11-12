@@ -89,11 +89,11 @@ function get_feature_image_as_bg( $size = 'full' ) {
     }
 }
 
-function get_option_img($i) {
+function get_option_img($i, $n='0') {
     $img = get_option($i);
     if ($img) {
         return esc_attr($img);
     } else {
-        return get_template_directory_uri() . '/img/bg01.jpg';
+        return get_template_directory_uri() . '/img/bg'.$n.'.jpg';
     }
 }

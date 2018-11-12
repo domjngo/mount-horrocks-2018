@@ -255,22 +255,6 @@ footer .site-info {
     padding: 1em 1.6em;
     margin: 0 0.6em;
 }
-.btn-action:hover {
-    background-color: rgba(255,255,255,0.3);
-}
-.banner h1 {
-    font-size: 4em;
-    margin: 1.6em 0 0.5em;
-}
-
-.cat-nav {
-    margin-bottom: 1em;
-}
-
-.cat-nav .btn {
-    margin-bottom: 0.5em;
-}
-
 .paged-posts {
     margin-bottom: 1.6em;
 }
@@ -294,12 +278,19 @@ nav .next {
 }
 
 .call-to-action {
-    margin: 1.6em 0;
-    background-color: #f8f7ed;
-    box-shadow: 3px 3px 5px #eee;
-    min-height: 220px;
-    border-radius: 3px;
-    padding: 0.5em;
+    margin: 3.2em 0;
+}
+.btn-home {
+    color: #222;
+    font-size: 1em;
+    background-color: transparent;
+    border-color: #222;
+    padding: 1em 1.6em;
+    margin: 0.6em 0;
+}
+.btn:hover {
+    color: #fff;
+    background-color: #91700C;
 }
 
 /**

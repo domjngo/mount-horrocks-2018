@@ -24,6 +24,7 @@ function mount_settings_page_admin() {
         register_setting( 'gsp-group', 'g_title_'.$i );
         register_setting( 'gsp-group', 'g_text_'.$i );
         register_setting( 'gsp-group', 'g_button_'.$i );
+        register_setting( 'gsp-group', 'g_img_url_'.$i );
         register_setting( 'gsp-group', 'g_url_'.$i );
     }
 }
@@ -63,7 +64,7 @@ function mount_settings_page() {
                         <td>9 words max</td>
                     </tr>
                     <tr valign="top">
-                        <th scope="row"><label for="home_img">Image URL</label></th>
+                        <th scope="row"><label for="home_img">Header image URL</label></th>
                         <td><input type="text" name="home_img" value="<?php echo get_option('home_img'); ?>" /></td>
                         <td>Image size 1600px x 900px max</td>
                     </tr>
@@ -97,7 +98,7 @@ function mount_settings_page() {
             <h2>Call to action</h2>
             <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>
                 <hr>
-                <h3>Button <?php echo $i; ?> </h3>
+                <h3>Section <?php echo $i; ?> </h3>
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><label for="g_title_<?php echo $i; ?>">Title</label></th>
@@ -111,6 +112,10 @@ function mount_settings_page() {
                         <th scope="row"><label for="g_button_<?php echo $i; ?>">Button label</label></th>
                         <td><input type="text" name="g_button_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_button_'.$i) ); ?>" /></td>
                     </tr>
+                    <!-- <tr valign="top">
+                        <th scope="row"><label for="g_img_url_<?php echo $i; ?>">Image URL</label></th>
+                        <td><input type="text" name="g_img_url_<?php echo $i; ?>" value="<?php echo get_option('g_img_url_'.$i); ?>" /></td>
+                    </tr> -->
                     <tr valign="top">
                         <th scope="row"><label for="g_url_<?php echo $i; ?>">Button URL</label></th>
                         <td><input type="text" name="g_url_<?php echo $i; ?>" value="<?php echo get_option('g_url_'.$i); ?>" /></td>
