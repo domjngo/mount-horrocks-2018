@@ -10,6 +10,10 @@ function mount_settings_menu() {
 
 function mount_settings_page_admin() {
 
+    register_setting( 'gsp-group', 'home_img' );
+    register_setting( 'gsp-group', 'home_quote' );
+    register_setting( 'gsp-group', 'home_source' );
+
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'g_quote_'.$i );
         register_setting( 'gsp-group', 'g_source_'.$i );
@@ -46,7 +50,27 @@ function mount_settings_page() {
             <?php settings_fields( 'gsp-group' ); ?>
             <?php do_settings_sections( 'gsp-group' ); ?>
 
-            <h2>Homepage slider</h2>
+            <h2>Homepage hero banner</h2>
+                <table class="form-table">
+                    <tr valign="top">
+                        <th scope="row"><label for="home_quote">Quote</label></th>
+                        <td><textarea name="home_quote"><?php echo esc_attr( get_option('home_quote') ); ?></textarea></td>
+                        <td>12 words max</td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="home_source">Quote source</label></th>
+                        <td><input type="text" name="home_source" value="<?php echo esc_attr( get_option('home_source') ); ?>" /></td>
+                        <td>9 words max</td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="home_img">Image URL</label></th>
+                        <td><input type="text" name="home_img" value="<?php echo get_option('home_img'); ?>" /></td>
+                        <td>Image size 1600px x 900px max</td>
+                    </tr>
+                </table>
+            <?php submit_button(); ?>
+
+            <!-- <h2>Homepage slider</h2>
             <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>
                 <hr>
                 <h3>Slide <?php echo $i; ?> </h3>
@@ -68,7 +92,7 @@ function mount_settings_page() {
                     </tr>
                 </table>
             <?php } ?>
-            <?php submit_button(); ?>
+            <?php submit_button(); ?> -->
 
             <h2>Call to action</h2>
             <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>

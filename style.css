@@ -220,27 +220,43 @@ footer .site-info {
     min-height: 480px;
     color: #fff;
 }
+.header-home a, .header-home a:hover {
+    color: #fff;
+}
 .header-home h1, .header-home p {
     color: #fff;
-    text-shadow: #222 2px 2px 5px;
-    margin-left: 10%;
-    margin-right: 10%;
+    text-shadow: #222 2px 3px 5px;
+}
+@media (min-width: 768px) {
+    .header-home h1, .header-home p {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+.header-home h1 {
+    margin-bottom: 0;
 }
 .header-home .container {
     display: table-cell;
     vertical-align: middle;
 }
+.header-home .home-call-to-action {
+    margin-bottom: 2.4em;
+}
 .home-entry {
     margin: 1.6em 0;
 }
 .btn-action {
-    color: #000;
+    text-shadow: #222 2px 3px 5px;
     font-size: 1em;
     font-weight: 700;
-    background-color: rgba(255,255,255,0.7);
+    background-color: transparent;
     border-color: #fff;
     padding: 1em 1.6em;
     margin: 0 0.6em;
+}
+.btn-action:hover {
+    background-color: rgba(255,255,255,0.3);
 }
 .banner h1 {
     font-size: 4em;
