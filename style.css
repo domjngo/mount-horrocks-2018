@@ -195,7 +195,10 @@ ul.buttons li a:hover {
  * Footer
  * ----------------------------------------------------------------------------
  */
-
+.social {
+    background-color: #123c3d;
+    padding: 1em 0;
+}
 footer {
     padding: 1em 0;
     background-color: #e4eaea;
@@ -370,4 +373,112 @@ nav .next {
 
 iframe {
     margin: 1.6em 0;
+}
+
+/**
+* Temp
+* ----------------------------------------------------------------------------
+*/
+
+.lcp_catlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lcp_catlist h2, .lcp_catlist h3 {
+    border-top: solid 1px #ccc;
+}
+.lcp_title {
+    display: none;
+}
+.page ul.lcp_catlist li {
+    margin-bottom:10px;
+}
+
+#wine {
+    width: 14%;
+    padding: 0;
+    vertical-align: top;
+}
+#wine h2 {
+    margin: 5px 5px 5px 5px;
+    text-align: left;
+    color: #123c3d;
+    font-size: 18px;
+}
+#wine p {
+    margin: 5px 5px 0 0;
+    padding: 0 0 0 5px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    border-left-width:1px;
+    border-left-style:solid;
+    border-left-color:#ccc;
+}
+.grid {display:inline;float:left;margin-left:0;margin-right:0;}
+
+#vineyard {
+    width: 249px;
+    padding: 0;
+    vertical-align: top;
+}
+#vineyard h2 {
+    margin: 20px 10px 5px 0;
+    text-align: left;
+    color: #123c3d;
+    font-size: 18px;
+}
+#vineyard p {
+    margin: 5px 30px 5px 0;
+    padding: 0 0 0 10px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    border-left-width:1px;
+    border-left-style:solid;
+    border-left-color:#ccc;
+}
+
+li.widget_wp_shopping_cart ul {
+    list-style-image: none !important;
+    list-style-type: none !important;
+}
+
+li.widget_wp_shopping_cart ul li {
+    list-style-image: none !important;
+    list-style-type: none !important;
+    background: none !important;
+}
+
+li.widget_wp_shopping_cart ul li:before{
+    /* Countermand any content properties like the one in the default wordpress theme.  */
+    content: "" !important;
+}
+
+
+div.categorydisplay ul li:before{
+    /* Countermand any content properties like the one in the default wordpress theme.  */
+    content: "" !important;
+}
+
+a.additional_description_link img {
+    margin:0px 3px 0px 0px;
+}
+
+div.textcol form {
+    min-width: 300px;
+}
+
+div.wpsc_loading_animation {
+    visibility: hidden;
+}
+
+#idc-container-parent{
+    clear:both;
+
+}
+table.wpsc_checkout_table label{
+    display:inline;
+    padding-right:10px;
 }
