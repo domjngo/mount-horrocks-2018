@@ -19,31 +19,29 @@
         <div class="row">
             <?php if ( is_active_sidebar( 'footer-col-1' ) ) { ?>
                 <div class="footer-col col-md-4">
-                    <ul>
-                        <?php dynamic_sidebar( 'footer-col-1' ); ?>
-                    </ul>
+                    <?php dynamic_sidebar( 'footer-col-1' ); ?>
                 </div>
             <?php } ?>
             <?php if ( is_active_sidebar( 'footer-col-2' ) ) { ?>
                 <div class="footer-col col-md-4">
-                    <ul>
-                        <?php dynamic_sidebar( 'footer-col-2' ); ?>
-                    </ul>
+                    <?php dynamic_sidebar( 'footer-col-2' ); ?>
                 </div>
             <?php } ?>
             <?php if ( is_active_sidebar( 'footer-col-3' ) ) { ?>
                 <div class="footer-col col-md-4">
-                    <ul>
-                        <?php dynamic_sidebar( 'footer-col-3' ); ?>
-                    </ul>
+                    <?php dynamic_sidebar( 'footer-col-3' ); ?>
                 </div>
             <?php } ?>
             <div class="col-md-12 text-center site-info">
-                <p>
-                    <?php echo get_option('g_tripadvisor'); ?>
-                </p>
+                <?php if ( get_option('g_tripadvisor') ) { ?>
+                    <p>
+                        <?php echo get_option('g_tripadvisor'); ?>
+                    </p>
+                <?php } ?>
                 <h3><?php bloginfo('name'); ?></h3>
-                <p><?php echo get_option('g_location'); ?></p>
+                <?php if ( get_option('g_location') ) { ?>
+                    <p><?php echo get_option('g_location'); ?></p>
+                <?php } ?>
                 <p>
                     <small>Copyright © <?php echo date("Y"); ?> <br>
                         Website by <a href="http://chrisbishop.me.uk/" target="_blank">Chris Bishop</a></small>

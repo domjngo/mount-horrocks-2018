@@ -1,5 +1,7 @@
 <div class="col-md-4">
-    <div class="entry-sidebar">
-
-    </div>
+    <?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
+        <div class="entry-sidebar">
+            <?php dynamic_sidebar( 'sidebar' ); ?>
+        </div>
+    <?php } ?>
 </div>
