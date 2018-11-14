@@ -235,8 +235,8 @@ footer .site-info {
 }
 @media (min-width: 768px) {
     .header-home h1, .header-home p {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 .header-home h1 {

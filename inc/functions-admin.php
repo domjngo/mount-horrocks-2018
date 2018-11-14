@@ -11,8 +11,11 @@ function mount_settings_menu() {
 function mount_settings_page_admin() {
 
     register_setting( 'gsp-group', 'home_img' );
-    register_setting( 'gsp-group', 'home_quote' );
-    register_setting( 'gsp-group', 'home_source' );
+
+    for ( $i=1 ; $i<=3 ; $i++ ) {
+        register_setting( 'gsp-group', 'home_quote_'.$i );
+        register_setting( 'gsp-group', 'home_source_'.$i );
+    }
 
     register_setting( 'gsp-group', 'g_facebook' );
     register_setting( 'gsp-group', 'g_twitter' );
@@ -58,48 +61,29 @@ function mount_settings_page() {
             <?php do_settings_sections( 'gsp-group' ); ?>
 
             <h2>Homepage hero banner</h2>
-                <table class="form-table">
-                    <tr valign="top">
-                        <th scope="row"><label for="home_quote">Quote</label></th>
-                        <td><textarea name="home_quote"><?php echo esc_attr( get_option('home_quote') ); ?></textarea></td>
-                        <td>12 words max</td>
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row"><label for="home_source">Quote source</label></th>
-                        <td><input type="text" name="home_source" value="<?php echo esc_attr( get_option('home_source') ); ?>" /></td>
-                        <td>9 words max</td>
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row"><label for="home_img">Header image URL</label></th>
-                        <td><input type="text" name="home_img" value="<?php echo get_option('home_img'); ?>" /></td>
-                        <td>Image size 1600px x 900px max</td>
-                    </tr>
-                </table>
-            <?php submit_button(); ?>
-
-            <!-- <h2>Homepage slider</h2>
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="home_img">Header image URL</label></th>
+                    <td><input type="text" name="home_img" value="<?php echo get_option('home_img'); ?>" /></td>
+                    <td>Image size 1600px x 900px max</td>
+                </tr>
+            </table>
             <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>
-                <hr>
-                <h3>Slide <?php echo $i; ?> </h3>
-                <table class="form-table">
-                    <tr valign="top">
-                        <th scope="row"><label for="g_quote_<?php echo $i; ?>">Quote</label></th>
-                        <td><textarea name="g_quote_<?php echo $i; ?>"><?php echo esc_attr( get_option('g_quote_'.$i) ); ?></textarea></td>
-                        <td>28 words max</td>
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row"><label for="g_source_<?php echo $i; ?>">Quote source</label></th>
-                        <td><input type="text" name="g_source_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_source_'.$i) ); ?>" /></td>
-                        <td>9 words max</td>
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row"><label for="g_image_<?php echo $i; ?>">Image URL</label></th>
-                        <td><input type="text" name="g_image_<?php echo $i; ?>" value="<?php echo get_option('g_image_'.$i); ?>" /></td>
-                        <td>Image size 1240px x 360px max</td>
-                    </tr>
-                </table>
+            <h3>Quote <?php echo $i; ?></h3>
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="home_quote_<?php echo $i; ?>">Quote</label></th>
+                    <td><textarea name="home_quote_<?php echo $i; ?>" style="height: 4em;"><?php echo esc_attr( get_option('home_quote_'.$i) ); ?></textarea></td>
+                    <td>12 words max</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="home_source_<?php echo $i; ?>">Quote source</label></th>
+                    <td><input type="text" name="home_source_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('home_source_'.$i) ); ?>" /></td>
+                    <td>9 words max</td>
+                </tr>
+            </table>
             <?php } ?>
-            <?php submit_button(); ?> -->
+            <?php submit_button(); ?>
 
             <h2>Call to action</h2>
             <?php for ( $i=1 ; $i<=3 ; $i++ ) { ?>
