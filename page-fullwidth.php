@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Full width
+ *
+ */
+get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
 
@@ -8,7 +13,7 @@
                 <?php get_template_part( 'partials/header-page' ); ?>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="entry-header">
                                 <h1>
                                     <?php the_title(); ?>
@@ -18,7 +23,6 @@
                                 <?php the_content(); ?>
                             </div>
                         </div>
-                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </article>

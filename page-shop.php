@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Shop
+ *
+ */
+get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
 
@@ -18,7 +23,7 @@
                                 <?php the_content(); ?>
                             </div>
                         </div>
-                        <?php get_sidebar(); ?>
+                        <?php get_sidebar('shop'); ?>
                     </div>
                 </div>
             </article>
