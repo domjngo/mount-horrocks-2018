@@ -22,6 +22,7 @@ function mount_settings_page_admin() {
     register_setting( 'gsp-group', 'g_instagram' );
     register_setting( 'gsp-group', 'g_tripadvisor' );
     register_setting( 'gsp-group', 'g_location' );
+    register_setting( 'gsp-group', 'google_analytics' );
 
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'g_quote_'.$i );
@@ -135,6 +136,10 @@ function mount_settings_page() {
                 <tr valign="top">
                     <th scope="row"><label for="g_tripadvisor">Tripadvisor code</label></th>
                     <td><textarea name="g_tripadvisor"><?php echo esc_attr( get_option('g_tripadvisor') ); ?></textarea></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="google_analytics">Google analytics code</label></th>
+                    <td><textarea name="google_analytics"><?php echo esc_attr( get_option('google_analytics') ); ?></textarea></td>
                 </tr>
             </table>
             <?php submit_button(); ?>
