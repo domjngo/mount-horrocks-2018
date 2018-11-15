@@ -7,7 +7,7 @@ function wine_shortcode( $atts )
         'title' => '',
         'link' => '',
         'first' => false,
-        'end' => false
+        'last' => false
     ), $atts);
 
     $first = '';
@@ -16,7 +16,7 @@ function wine_shortcode( $atts )
         $first = '<div class="wines">';
     }
     if ( $a['last'] ) {
-        $last = '<div>';
+        $last = '</div>';
     }
 
     $html = $first . wine_html( $a['image'], $a['title'], $a['link'] ) . $last;
@@ -27,13 +27,11 @@ function wine_shortcode( $atts )
 function wine_html( $img, $title, $link ) {
 
     $html = '<div class="wine-item">';
-    $html .= '<a href="%2">';
-    $html .= '<img src="%s" alt="%2">';
-    $html .= '<h3>%2</h3>';
+    $html .= '<a href="%s">';
+    $html .= '<img src="%s" alt="%s">';
+    $html .= '<h3>%s</h3>';
     $html .= '</a>';
     $html .= '</div>';
 
     return sprintf( $html, $link, $img, $title, $title );
 }
-
-add_shortcode( 'wines', 'wine_shortcode' );

@@ -303,31 +303,30 @@ nav .next {
 }
 
 /**
- * Cards
+ * Wines
  * ----------------------------------------------------------------------------
  */
 
-.cards article {
-    margin-bottom: 2em;
+.wines {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
-
-.cards .entry-content {
-    border-top: solid 4px #3b94d9;
-    padding-bottom: 1em;
+.wine-item {
+    float: left;
+    width: 14%;
+    padding: 5px;
+    vertical-align: top;
+    min-width: 140px;
 }
-
-.cards .entry-thumbnail {
-    max-height: 200px;
-    overflow: hidden;
-}
-
-.cards .btn-default {
-    color: #95a5a6;
-    background-color: #fff;
-}
-
-.cards .entry-content a {
-    text-decoration: none;
+@media (max-width: 480px) {
+    .wine-item {
+        width: 48%;
+    }
 }
 
 /**
