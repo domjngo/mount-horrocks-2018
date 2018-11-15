@@ -242,6 +242,11 @@ footer .site-info {
         margin-right: 10%;
     }
 }
+@media (max-width: 768px) {
+    .header-home h1 {
+        font-size: 2em;
+    }
+}
 .header-home h1 {
     margin-bottom: 0;
 }
@@ -262,7 +267,7 @@ footer .site-info {
     background-color: transparent;
     border-color: #fff;
     padding: 1em 1.6em;
-    margin: 0 0.6em;
+    margin: 0 0.6em 0.6em 0.6em;
 }
 .paged-posts {
     margin-bottom: 1.6em;
