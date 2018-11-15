@@ -28,8 +28,8 @@ function wine_html( $img, $title, $link ) {
 
     $html = '<div class="wine-item">';
     $html .= '<a href="%s">';
-    $html .= '<img src="%s" alt="%s">';
-    $html .= '<h3>%s</h3>';
+    $html .= '<img src="%s" alt="%s" class="img-responsive">';
+    $html .= '<h4>%s</h4>';
     $html .= '</a>';
     $html .= '</div>';
 
