@@ -406,11 +406,25 @@ td.mcntitleBlockInner
 {
     width: 100% !important;
 }
-
+.post-9 .entry-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 #wine {
     width: 14%;
-    padding: 0;
+    padding: 5px;
     vertical-align: top;
+    min-width: 140px;
+}
+@media (max-width: 480px) {
+    #wine {
+        width: 48%;
+    }
 }
 #wine h2 {
     margin: 5px 5px 5px 5px;
@@ -428,7 +442,7 @@ td.mcntitleBlockInner
     border-left-style:solid;
     border-left-color:#ccc;
 }
-.grid {display:inline;float:left;margin-left:0;margin-right:0;}
+.grid {display:block;float:left;margin-left:0;margin-right:0;}
 
 .entry-content .grid img.alignnone {
     margin: 0;
