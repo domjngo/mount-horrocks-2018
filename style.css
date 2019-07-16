@@ -306,6 +306,14 @@ nav .next {
     color: #fff;
     background-color: #91700C;
 }
+.section-img .section-bg {
+    background: rgba(0,0,0,.2);
+    min-height: 480px;
+    color: #fff;
+}
+.section-img .section-bg h2 {
+    color: #fff;
+}
 
 /**
  * Wines
