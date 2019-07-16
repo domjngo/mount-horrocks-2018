@@ -1,9 +1,16 @@
-<div id="home_banner" class="header-home" style="background-image: url(<?php echo get_option_img('home_img'); ?>);">
+<?php
+$n = rand( 1, 3 );
+if ( get_option('home_img') ) {
+    $image = get_option_img('home_img');
+} else {
+    $image = get_option_img('home_img_'.$n);
+}
+?>
+<div id="home_banner" class="header-home" style="background-image: url(<?php echo $image; ?>);">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="home-entry text-center">
-                    <?php $n = rand( 1, 3 ); ?>
                     <h1><?php echo get_option('home_quote_'.$n); ?></h1>
                     <p><?php echo get_option('home_source_'.$n); ?></p>
                     <div class="home-call-to-action">

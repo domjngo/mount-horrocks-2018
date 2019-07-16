@@ -15,6 +15,7 @@ function mount_settings_page_admin() {
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'home_quote_'.$i );
         register_setting( 'gsp-group', 'home_source_'.$i );
+        register_setting( 'gsp-group', 'home_img_'.$i );
     }
 
     register_setting( 'gsp-group', 'g_facebook' );
@@ -81,6 +82,10 @@ function mount_settings_page() {
                     <th scope="row"><label for="home_source_<?php echo $i; ?>">Quote source</label></th>
                     <td><input type="text" name="home_source_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('home_source_'.$i) ); ?>" /></td>
                     <td>9 words max</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="home_img_<?php echo $i; ?>">Image URL</label></th>
+                    <td><input type="text" name="home_img_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('home_img_'.$i) ); ?>" /></td>
                 </tr>
             </table>
             <?php } ?>
