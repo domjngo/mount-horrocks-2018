@@ -7,6 +7,8 @@ get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
 
+<div class="homepage">
+
     <?php get_template_part( 'partials/header-home' ); ?>
 
     <main id="main" class="main" role="main">
@@ -21,6 +23,8 @@ get_header(); ?>
         </div>
         <?php get_template_part( 'partials/home-sections' ); ?>
     </main>
+
+</div>
 
 <?php endwhile; ?>
 

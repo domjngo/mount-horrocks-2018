@@ -1,40 +1,55 @@
-.header-home {
-  display: table;
-  background-size: cover;
-  background-position: center top;
-  width: 100%;
-  min-height: 480px;
-  color: #fff;
-  a {
+.homepage {
+  .header-home {
+    display: table;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    min-height: 480px;
     color: #fff;
-  }
-  a:hover {
-    color: #fff;
-  }
-  h1 {
-    margin-bottom: 0;
-  }
-  h1, p {
-    color: #fff;
-    text-shadow: #222 2px 3px 5px;
-  }
-  @media (min-width: 768px) {
-    h1, p {
-      margin-left: 10%;
-      margin-right: 10%;
+    a {
+      color: #fff;
+    }
+    a:hover {
+      color: #fff;
     }
     h1 {
-      font-size: 2em;
+      margin-bottom: 0;
+    }
+    h1, p {
+      color: #fff;
+      text-shadow: #222 2px 3px 5px;
+    }
+    @media (min-width: 768px) {
+      h1, p {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .home-call-to-action {
+      margin-bottom: 2.4em;
     }
   }
-  .container {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .home-call-to-action {
-    margin-bottom: 2.4em;
+  .section-img {
+    background-position: center center;
+    background-size: cover;
+    .section-bg {
+      background: rgba(0,0,0,.2);
+      min-height: 480px;
+      color: #fff;
+      h2 {
+        color: #fff;
+      }
+    }
   }
 }
+
 .home-entry {
   margin: 1.6em 0;
 }
@@ -85,11 +100,4 @@ nav .next {
   color: #fff;
   background-color: #91700C;
 }
-.section-img .section-bg {
-  background: rgba(0,0,0,.2);
-  min-height: 480px;
-  color: #fff;
-}
-.section-img .section-bg h2 {
-  color: #fff;
-}
+

@@ -4121,33 +4121,42 @@ footer {
   padding: 1em;
   background: #eee; }
 
-.header-home {
+.homepage .header-home {
   display: table;
   background-size: cover;
   background-position: center top;
   width: 100%;
   min-height: 480px;
   color: #fff; }
-  .header-home a {
+  .homepage .header-home a {
     color: #fff; }
-  .header-home a:hover {
+  .homepage .header-home a:hover {
     color: #fff; }
-  .header-home h1 {
+  .homepage .header-home h1 {
     margin-bottom: 0; }
-  .header-home h1, .header-home p {
+  .homepage .header-home h1, .homepage .header-home p {
     color: #fff;
     text-shadow: #222 2px 3px 5px; }
   @media (min-width: 768px) {
-    .header-home h1, .header-home p {
+    .homepage .header-home h1, .homepage .header-home p {
       margin-left: 10%;
       margin-right: 10%; }
-    .header-home h1 {
+    .homepage .header-home h1 {
       font-size: 2em; } }
-  .header-home .container {
+  .homepage .header-home .container {
     display: table-cell;
     vertical-align: middle; }
-  .header-home .home-call-to-action {
+  .homepage .header-home .home-call-to-action {
     margin-bottom: 2.4em; }
+.homepage .section-img {
+  background-position: center center;
+  background-size: cover; }
+  .homepage .section-img .section-bg {
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 480px;
+    color: #fff; }
+    .homepage .section-img .section-bg h2 {
+      color: #fff; }
 
 .home-entry {
   margin: 1.6em 0; }
@@ -4193,14 +4202,6 @@ nav .next {
 .btn:hover {
   color: #fff;
   background-color: #91700C; }
-
-.section-img .section-bg {
-  background: rgba(0, 0, 0, 0.2);
-  min-height: 480px;
-  color: #fff; }
-
-.section-img .section-bg h2 {
-  color: #fff; }
 
 .wines {
   display: -webkit-box;
