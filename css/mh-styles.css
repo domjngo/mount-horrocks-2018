@@ -4012,30 +4012,23 @@ body {
   color: #222;
   font-size: 18px;
   line-height: 1.6; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bitter', serif;
-  margin: 1.6em 0 1em;
-  font-weight: 700;
-  color: #123c3d; }
-
-h1 {
-  font-size: 3em; }
-
-p {
-  margin: 0 0 1.6em; }
-
-a {
-  color: #91700C; }
-
-a:hover, a:focus {
-  text-decoration: underline; }
-
-a:focus {
-  background-color: #f7ecb5; }
-
-ul {
-  margin-bottom: 1.6em; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: 'Bitter', serif;
+    margin: 1.6em 0 1em;
+    font-weight: 700;
+    color: #123c3d; }
+  body h1 {
+    font-size: 3em; }
+  body p {
+    margin: 0 0 1.6em; }
+  body a {
+    color: #91700C; }
+  body a:hover, body a:focus {
+    text-decoration: underline; }
+  body a:focus {
+    background-color: #f7ecb5; }
+  body ul {
+    margin-bottom: 1.6em; }
 
 .navbar {
   margin: 0;
@@ -4043,6 +4036,10 @@ ul {
   border-radius: 0;
   border: none;
   background: #fff; }
+  .navbar .navbar-brand {
+    height: 100px; }
+  .navbar .navbar-nav > li > a {
+    padding-bottom: 1em; }
 
 @media (min-width: 768px) {
   .navbar .container-fluid {
@@ -4053,12 +4050,6 @@ ul {
   .navbar-default .navbar-collapse {
     display: table-cell !important;
     vertical-align: middle; } }
-.navbar-brand {
-  height: 100px; }
-
-.navbar-nav > li > a {
-  padding-bottom: 1em; }
-
 .navbar-default .navbar-nav > li > a {
   color: #123c3d;
   font-family: 'Bitter', serif; }
@@ -4088,19 +4079,15 @@ ul {
 footer {
   padding: 1em 0;
   background-color: #e4eaea; }
-
-footer ul {
-  list-style-type: none;
-  padding: 0; }
-
-footer .site-info {
-  padding: 1em; }
-
-.footer-col .widget {
-  padding-right: 3.4em; }
-
-.widFRR {
-  margin: 0 auto !important; }
+  footer ul {
+    list-style-type: none;
+    padding: 0; }
+  footer .footer-col .widget {
+    padding-right: 3.4em; }
+  footer .site-info {
+    padding: 1em; }
+  footer .widFRR {
+    margin: 0 auto !important; }
 
 .wp-caption.aligncenter, img.aligncenter {
   display: block;
@@ -4141,30 +4128,26 @@ footer .site-info {
   width: 100%;
   min-height: 480px;
   color: #fff; }
-
-.header-home a, .header-home a:hover {
-  color: #fff; }
-
-.header-home h1, .header-home p {
-  color: #fff;
-  text-shadow: #222 2px 3px 5px; }
-
-@media (min-width: 768px) {
-  .header-home h1, .header-home p {
-    margin-left: 10%;
-    margin-right: 10%; } }
-@media (max-width: 768px) {
+  .header-home a {
+    color: #fff; }
+  .header-home a:hover {
+    color: #fff; }
   .header-home h1 {
-    font-size: 2em; } }
-.header-home h1 {
-  margin-bottom: 0; }
-
-.header-home .container {
-  display: table-cell;
-  vertical-align: middle; }
-
-.header-home .home-call-to-action {
-  margin-bottom: 2.4em; }
+    margin-bottom: 0; }
+  .header-home h1, .header-home p {
+    color: #fff;
+    text-shadow: #222 2px 3px 5px; }
+  @media (min-width: 768px) {
+    .header-home h1, .header-home p {
+      margin-left: 10%;
+      margin-right: 10%; }
+    .header-home h1 {
+      font-size: 2em; } }
+  .header-home .container {
+    display: table-cell;
+    vertical-align: middle; }
+  .header-home .home-call-to-action {
+    margin-bottom: 2.4em; }
 
 .home-entry {
   margin: 1.6em 0; }
@@ -4233,12 +4216,10 @@ nav .next {
   width: 14%;
   padding: 0 0.6em;
   min-width: 140px; }
-
-.wine-item a {
-  text-decoration: none; }
-
-.wine-item a:hover {
-  text-decoration: underline; }
+  .wine-item a {
+    text-decoration: none; }
+  .wine-item a:hover {
+    text-decoration: underline; }
 
 @media (max-width: 480px) {
   .wine-item {

@@ -4,6 +4,12 @@
   border-radius: 0;
   border: none;
   background: #fff;
+  .navbar-brand {
+    height: 100px;
+  }
+  .navbar-nav > li > a {
+    padding-bottom: 1em;
+  }
 }
 @media (min-width: 768px) {
   .navbar .container-fluid {
@@ -15,12 +21,6 @@
     display: table-cell !important;
     vertical-align: middle;
   }
-}
-.navbar-brand {
-  height: 100px;
-}
-.navbar-nav > li > a {
-  padding-bottom: 1em;
 }
 .navbar-default .navbar-nav > li > a {
   color: #123c3d;

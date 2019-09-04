@@ -12,12 +12,12 @@
   width: 14%;
   padding: 0 0.6em;
   min-width: 140px;
-}
-.wine-item a {
-  text-decoration: none;
-}
-.wine-item a:hover {
-  text-decoration: underline;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 @media (max-width: 480px) {
   .wine-item {
