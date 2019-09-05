@@ -216,6 +216,11 @@ footer .site-info {
 .widFRR {
     margin: 0 auto !important;
 }
+.social .logo {
+    max-width: 140px;
+    height: auto;
+    margin: 0 auto;
+}
 
 /**
  * Home
