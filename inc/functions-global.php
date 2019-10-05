@@ -2,7 +2,7 @@
 
 // Enqueue styles and scripts
 function bc_styles() {
-    wp_register_style( 'mh-styles', get_template_directory_uri() . '/css/mh-style.min.css', array(), 1.1, 'all' );
+    wp_register_style( 'mh-styles', get_template_directory_uri() . '/css/mh-styles.min.css', array(), 1.1, 'all' );
     wp_register_style( 'google-fonts',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Bitter', array(), 1.0, 'all' );
     wp_enqueue_style( 'mh-styles' );
