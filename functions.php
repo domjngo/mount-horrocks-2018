@@ -22,3 +22,7 @@ add_filter( 'next_posts_link_attributes', 'posts_link_attributes' );
 add_filter( 'previous_posts_link_attributes', 'posts_link_attributes' );
 
 add_shortcode( 'wine', 'wine_shortcode' );
+
+@ini_set( 'upload_max_size' , '6M' );
+@ini_set( 'post_max_size', '6M');
+@ini_set( 'max_execution_time', '100' );

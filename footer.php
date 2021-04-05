@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <p>
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Halliday_5RedStar_2020.png" class="img-responsive logo">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Halliday_5RedStar_2021.png" class="img-responsive logo">
                 </p>
                 <p>
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/aco-logo.png">

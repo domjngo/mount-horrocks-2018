@@ -19,7 +19,7 @@ get_header(); ?>
                                     <?php the_title(); ?>
                                 </h1>
                             </div>
-                            <div class="entry-content clearfix">
+                            <div class="entry-content">
                                 <?php the_content(); ?>
                             </div>
                         </div>

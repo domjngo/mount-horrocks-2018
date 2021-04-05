@@ -8,7 +8,7 @@ function my_password_form() {
 	<p>This shop is password protected. To view it please enter your password below:</p>
     <label for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
     </form>
-	<p><strong>Free freight</strong> for orders of 6 bottles or more.</p>
+	<p>Minimum order is 6 bottles and we will deliver within Australia <strong>freight free.</strong></p>
 	<p><strong>You must be 18 years or older to enter the Mount Horrocks online shop. By clicking ‘Submit’ you are verifying this.</strong></p>
 	<p>Having trouble logging in to purchase? Just phone us on (08) 8849 2243, or email <a href="mailto:sales@mounthorrocks.com">sales@mounthorrocks.com</a> and we can help.</p>
 	<p>If not a member, join our <a href="http://www.mounthorrocks.com/contact/join-our-mailing-list/">mailing list</a></p>
