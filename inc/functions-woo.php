@@ -41,3 +41,16 @@ function woo_wine_change_product_description_tab_heading($title)
     return __('Tasting notes');
 }
 
+function disable_coupon_field_on_cart( $enabled ) {
+    if ( is_cart() ) {
+        $enabled = false;
+    }
+    return $enabled;
+}
+
+function disable_coupon_field_on_checkout( $enabled ) {
+    if ( is_checkout() ) {
+        $enabled = false;
+    }
+    return $enabled;
+}

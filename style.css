@@ -405,6 +405,33 @@ iframe {
 * ----------------------------------------------------------------------------
 */
 
+.woocommerce-page .head {
+    box-shadow: 0 8px 6px -6px #eee;
+    margin-bottom: 1.6em;
+}
+
+.woocommerce div.product p.price {
+    display: none;
+}
+
+.woocommerce div.product span.price {
+    color: #222;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.woocommerce div.product .woocommerce-variation-price {
+    margin-bottom: 1em;
+}
+
+.woocommerce div.product form.cart .variations td.label {
+    display: none;
+}
+
+.woocommerce .checkbox input[type=checkbox] {
+    position: inherit;
+}
+
 
 /**
 * Temp

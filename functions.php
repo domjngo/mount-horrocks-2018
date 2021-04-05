@@ -32,6 +32,8 @@ add_filter('woocommerce_related_products_args', 'woo_wine_remove_related_product
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 add_filter('woocommerce_product_tabs', 'woo_wine_rename_tabs', 98);
 add_filter('woocommerce_product_description_heading', 'woo_wine_change_product_description_tab_heading', 10, 1);
+add_filter( 'woocommerce_coupons_enabled', 'disable_coupon_field_on_cart' );
+add_filter( 'woocommerce_coupons_enabled', 'disable_coupon_field_on_checkout' );
 
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
