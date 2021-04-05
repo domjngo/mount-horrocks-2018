@@ -453,6 +453,14 @@ iframe {
     height: 42px;
 }
 
+.woocommerce ul.products li.product .price {
+    display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel h2 {
+    display: none;
+}
+
 
 /**
 * Temp
