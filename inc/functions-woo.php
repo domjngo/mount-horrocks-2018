@@ -54,3 +54,26 @@ function disable_coupon_field_on_checkout( $enabled ) {
     }
     return $enabled;
 }
+
+function select_variations_on_shop_page() {
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+    add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_single_add_to_cart', 30 );
+}
+
+function shop_page_format_price_range( $price, $from, $to ) {
+    return wc_price( $from ) . ' / ' . wc_price( $to );
+}
+
+function add_extra_item_to_nav_menu( $items, $args ) {
+    if( $args->menu == 'primary' ) {
+        $cart_count = WC()->cart->cart_contents_count;
+        $cart_url = wc_get_cart_url();
+        $items .= '<li class="menu-item"><a class="cart-btn" href="' . $cart_url . '" title="My Basket">';
+        $items .= '<i class="fas fa-shopping-cart"></i>';
+        if ($cart_count > 0) {
+            $items .= '<span class="cart-count">' . $cart_count . '</span>';
+        }
+        $items .= '</a></li>';
+    }
+    return $items;
+}
