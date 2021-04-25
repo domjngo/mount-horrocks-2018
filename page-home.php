@@ -19,6 +19,7 @@ get_header(); ?>
                 </div>
             </article>
         </div>
+        <?php get_template_part( 'partials/home-sections' ); ?>
     </main>
 
 <?php endwhile; ?>

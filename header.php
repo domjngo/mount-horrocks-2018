@@ -8,6 +8,13 @@
         <?php wp_title('|', true, 'right'); ?>
     </title>
     <?php wp_head(); ?>
+    <?php
+    if ( get_option('google_analytics') ) {
+        echo get_option('google_analytics');
+    }
+    ?>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

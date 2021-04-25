@@ -15,6 +15,7 @@ function mount_settings_page_admin() {
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'home_quote_'.$i );
         register_setting( 'gsp-group', 'home_source_'.$i );
+        register_setting( 'gsp-group', 'home_img_'.$i );
     }
 
     register_setting( 'gsp-group', 'g_facebook' );
@@ -22,6 +23,7 @@ function mount_settings_page_admin() {
     register_setting( 'gsp-group', 'g_instagram' );
     register_setting( 'gsp-group', 'g_tripadvisor' );
     register_setting( 'gsp-group', 'g_location' );
+    register_setting( 'gsp-group', 'google_analytics' );
 
     for ( $i=1 ; $i<=3 ; $i++ ) {
         register_setting( 'gsp-group', 'g_quote_'.$i );
@@ -35,6 +37,14 @@ function mount_settings_page_admin() {
         register_setting( 'gsp-group', 'g_button_'.$i );
         register_setting( 'gsp-group', 'g_img_url_'.$i );
         register_setting( 'gsp-group', 'g_url_'.$i );
+    }
+
+    for ( $i=1 ; $i<=4 ; $i++ ) {
+        register_setting( 'gsp-group', 'mh_title_'.$i );
+        register_setting( 'gsp-group', 'mh_text_'.$i );
+        register_setting( 'gsp-group', 'mh_button_'.$i );
+        register_setting( 'gsp-group', 'mh_img_url_'.$i );
+        register_setting( 'gsp-group', 'mh_url_'.$i );
     }
 }
 
@@ -81,6 +91,10 @@ function mount_settings_page() {
                     <td><input type="text" name="home_source_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('home_source_'.$i) ); ?>" /></td>
                     <td>9 words max</td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="home_img_<?php echo $i; ?>">Image URL</label></th>
+                    <td><input type="text" name="home_img_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('home_img_'.$i) ); ?>" /></td>
+                </tr>
             </table>
             <?php } ?>
             <?php submit_button(); ?>
@@ -102,10 +116,6 @@ function mount_settings_page() {
                         <th scope="row"><label for="g_button_<?php echo $i; ?>">Button label</label></th>
                         <td><input type="text" name="g_button_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('g_button_'.$i) ); ?>" /></td>
                     </tr>
-                    <!-- <tr valign="top">
-                        <th scope="row"><label for="g_img_url_<?php echo $i; ?>">Image URL</label></th>
-                        <td><input type="text" name="g_img_url_<?php echo $i; ?>" value="<?php echo get_option('g_img_url_'.$i); ?>" /></td>
-                    </tr> -->
                     <tr valign="top">
                         <th scope="row"><label for="g_url_<?php echo $i; ?>">Button URL</label></th>
                         <td><input type="text" name="g_url_<?php echo $i; ?>" value="<?php echo get_option('g_url_'.$i); ?>" /></td>
@@ -113,6 +123,37 @@ function mount_settings_page() {
                 </table>
             <?php } ?>
             <?php submit_button(); ?>
+
+            <h2>Homepage sections</h2>
+            <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
+                <hr>
+                <h3>Section <?php echo $i; ?> </h3>
+                <table class="form-table">
+                    <tr valign="top">
+                        <th scope="row"><label for="mh_title_<?php echo $i; ?>">Title</label></th>
+                        <td><input type="text" name="mh_title_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('mh_title_'.$i) ); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="mh_text_<?php echo $i; ?>">Text</label></th>
+                        <td>
+                            <textarea name="mh_text_<?php echo $i; ?>"><?php echo esc_attr( get_option('mh_text_'.$i) ); ?></textarea>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="mh_button_<?php echo $i; ?>">Button label</label></th>
+                        <td><input type="text" name="mh_button_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('mh_button_'.$i) ); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="mh_url_<?php echo $i; ?>">Button URL</label></th>
+                        <td><input type="text" name="mh_url_<?php echo $i; ?>" value="<?php echo get_option('mh_url_'.$i); ?>" /></td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><label for="mh_img_url_<?php echo $i; ?>">Image URL</label></th>
+                        <td><input type="text" name="mh_img_url_<?php echo $i; ?>" value="<?php echo get_option('mh_img_url_'.$i); ?>" /></td>
+                    </tr>
+                </table>
+                <?php submit_button(); ?>
+            <?php } ?>
 
             <h2>Site settings</h2>
             <table class="form-table">
@@ -135,6 +176,10 @@ function mount_settings_page() {
                 <tr valign="top">
                     <th scope="row"><label for="g_tripadvisor">Tripadvisor code</label></th>
                     <td><textarea name="g_tripadvisor"><?php echo esc_attr( get_option('g_tripadvisor') ); ?></textarea></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="google_analytics">Google analytics code</label></th>
+                    <td><textarea name="google_analytics"><?php echo esc_attr( get_option('google_analytics') ); ?></textarea></td>
                 </tr>
             </table>
             <?php submit_button(); ?>

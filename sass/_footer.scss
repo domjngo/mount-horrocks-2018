@@ -1,0 +1,26 @@
+.social {
+  background-color: #123c3d;
+  padding: 1em 0;
+  .logo {
+    max-width: 140px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+footer {
+  padding: 1em 0;
+  background-color: #e4eaea;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .footer-col .widget {
+    padding-right: 3.4em;
+  }
+  .site-info {
+    padding: 1em;
+  }
+  .widFRR {
+    margin: 0 auto !important;
+  }
+}
