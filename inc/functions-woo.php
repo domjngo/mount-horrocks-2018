@@ -77,3 +77,9 @@ function add_extra_item_to_nav_menu( $items, $args ) {
     }
     return $items;
 }
+
+function add_continue_shopping_button( $message, $products ){
+    $message .= sprintf( '<br/><a href="%s" class="button wc-forward" style="clear:both;margin-top:5px;">%s</a>', esc_url( wc_get_page_permalink( 'shop' ) ), esc_html__( 'Continue Shopping', 'woocommerce' ) );
+
+    return $message;
+}

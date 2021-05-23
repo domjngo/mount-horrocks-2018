@@ -22,6 +22,7 @@ add_filter('the_content', 'add_image_responsive_class');
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 add_filter('wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2);
+add_filter( 'wc_add_to_cart_message_html', 'add_continue_shopping_button', 10, 2);
 
 add_shortcode('wine', 'wine_shortcode');
 
